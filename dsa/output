@@ -1,0 +1,836 @@
+inserting AXLE, 11d3010 ... 
+inserting BAIL, 11d3060 ... 
+inserting BALK, 11d30b0 ... 
+ -------------------------------- imbalance found, -2 at AXLE!
+AXLE parent : null, 3 -2
+BAIL parent : AXLE, 2 -1
+BALK parent : BAIL, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : null, 2 0
+BALK parent : BAIL, 1 0
+inserting BRACE, 11d3100 ... 
+inserting CANTILEVER, 11d3150 ... 
+ -------------------------------- imbalance found, -2 at BALK!
+AXLE parent : BAIL, 1 0
+BAIL parent : null, 4 -2
+BALK parent : BAIL, 3 -2
+BRACE parent : BALK, 2 -1
+CANTILEVER parent : BRACE, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : null, 3 -1
+BALK parent : BRACE, 1 0
+BRACE parent : BAIL, 2 0
+CANTILEVER parent : BRACE, 1 0
+inserting COLUMN, 11d31a0 ... 
+ -------------------------------- imbalance found, -2 at BAIL!
+AXLE parent : BAIL, 1 0
+BAIL parent : null, 4 -2
+BALK parent : BRACE, 1 0
+BRACE parent : BAIL, 3 -1
+CANTILEVER parent : BRACE, 2 -1
+COLUMN parent : CANTILEVER, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 3 0
+CANTILEVER parent : BRACE, 2 -1
+COLUMN parent : CANTILEVER, 1 0
+inserting CROSSBAR, 11d31f0 ... 
+ -------------------------------- imbalance found, -2 at CANTILEVER!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 4 -1
+CANTILEVER parent : BRACE, 3 -2
+COLUMN parent : CANTILEVER, 2 -1
+CROSSBAR parent : COLUMN, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+inserting CROSSPIECE, 11d3240 ... 
+inserting GIRDER, 11d3290 ... 
+ -------------------------------- imbalance found, -2 at CROSSBAR!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 5 -2
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 4 -2
+CROSSBAR parent : COLUMN, 3 -2
+CROSSPIECE parent : CROSSBAR, 2 -1
+GIRDER parent : CROSSPIECE, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 4 -1
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 3 -1
+CROSSBAR parent : CROSSPIECE, 1 0
+CROSSPIECE parent : COLUMN, 2 0
+GIRDER parent : CROSSPIECE, 1 0
+inserting JAMB, 11d32e0 ... 
+ -------------------------------- imbalance found, -2 at COLUMN!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 5 -2
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 4 -2
+CROSSBAR parent : CROSSPIECE, 1 0
+CROSSPIECE parent : COLUMN, 3 -1
+GIRDER parent : CROSSPIECE, 2 -1
+JAMB parent : GIRDER, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 4 -1
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : CROSSPIECE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : BRACE, 3 0
+GIRDER parent : CROSSPIECE, 2 -1
+JAMB parent : GIRDER, 1 0
+inserting JOIST, 11d3330 ... 
+ -------------------------------- imbalance found, -2 at GIRDER!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 5 -2
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : CROSSPIECE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : BRACE, 4 -1
+GIRDER parent : CROSSPIECE, 3 -2
+JAMB parent : GIRDER, 2 -1
+JOIST parent : JAMB, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 4 -1
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : CROSSPIECE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : BRACE, 3 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : CROSSPIECE, 2 0
+JOIST parent : JAMB, 1 0
+inserting LATH, 11d3380 ... 
+ -------------------------------- imbalance found, -2 at BRACE!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : null, 5 -2
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : CROSSPIECE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : BRACE, 4 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : CROSSPIECE, 3 -1
+JOIST parent : JAMB, 2 -1
+LATH parent : JOIST, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 4 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : CROSSPIECE, 3 -1
+JOIST parent : JAMB, 2 -1
+LATH parent : JOIST, 1 0
+inserting LINTEL, 11d33d0 ... 
+ -------------------------------- imbalance found, -2 at JOIST!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : CROSSPIECE, 4 -2
+JOIST parent : JAMB, 3 -2
+LATH parent : JOIST, 2 -1
+LINTEL parent : LATH, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 4 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : CROSSPIECE, 3 -1
+JOIST parent : LATH, 1 0
+LATH parent : JAMB, 2 0
+LINTEL parent : LATH, 1 0
+inserting PILE, 11d3420 ... 
+ -------------------------------- imbalance found, -2 at JAMB!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : CROSSPIECE, 4 -2
+JOIST parent : LATH, 1 0
+LATH parent : JAMB, 3 -1
+LINTEL parent : LATH, 2 -1
+PILE parent : LINTEL, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 4 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 3 0
+LINTEL parent : LATH, 2 -1
+PILE parent : LINTEL, 1 0
+inserting SOLDIERY, 11d3470 ... 
+ -------------------------------- imbalance found, -2 at LINTEL!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 4 -1
+LINTEL parent : LATH, 3 -2
+PILE parent : LINTEL, 2 -1
+SOLDIERY parent : PILE, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 4 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 3 0
+LINTEL parent : PILE, 1 0
+PILE parent : LATH, 2 0
+SOLDIERY parent : PILE, 1 0
+inserting SQUAD, 11d34c0 ... 
+inserting TROOPS, 11d3510 ... 
+ -------------------------------- imbalance found, -2 at SOLDIERY!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 6 -2
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 5 -2
+LINTEL parent : PILE, 1 0
+PILE parent : LATH, 4 -2
+SOLDIERY parent : PILE, 3 -2
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 4 -1
+LINTEL parent : PILE, 1 0
+PILE parent : LATH, 3 -1
+SOLDIERY parent : SQUAD, 1 0
+SQUAD parent : PILE, 2 0
+TROOPS parent : SQUAD, 1 0
+inserting POLE, 11d3560 ... 
+ -------------------------------- imbalance found, -2 at PILE!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 6 -2
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 5 -2
+LINTEL parent : PILE, 1 0
+PILE parent : LATH, 4 -2
+POLE parent : SOLDIERY, 1 0
+SOLDIERY parent : SQUAD, 2 1
+SQUAD parent : PILE, 3 1
+TROOPS parent : SQUAD, 1 0
+rotate RL 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 4 -1
+LINTEL parent : PILE, 1 0
+PILE parent : SOLDIERY, 2 0
+POLE parent : PILE, 1 0
+SOLDIERY parent : LATH, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting POST, 11d35b0 ... 
+ -------------------------------- imbalance found, -2 at LATH!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 6 -2
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : CROSSPIECE, 5 -2
+LINTEL parent : PILE, 1 0
+PILE parent : SOLDIERY, 3 -1
+POLE parent : PILE, 2 -1
+POST parent : POLE, 1 0
+SOLDIERY parent : LATH, 4 1
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate RL 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : LATH, 2 -1
+POST parent : POLE, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting PROP, 11d3600 ... 
+ -------------------------------- imbalance found, -2 at POLE!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : LATH, 3 -2
+POST parent : POLE, 2 -1
+PROP parent : POST, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : POST, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting RAFTER, 11d3650 ... 
+inserting REACH, 11d36a0 ... 
+ -------------------------------- imbalance found, -2 at POLE!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : POST, 3 -2
+RAFTER parent : POLE, 2 -1
+REACH parent : RAFTER, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : RAFTER, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting SCAFFOLDING, 11d36f0 ... 
+ -------------------------------- imbalance found, 2 at POST!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : RAFTER, 2 -1
+SCAFFOLDING parent : POLE, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate LL 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : RAFTER, 2 -1
+SCAFFOLDING parent : POLE, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting SCANTLING, 11d3740 ... 
+ -------------------------------- imbalance found, -2 at POLE!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : RAFTER, 3 -2
+SCAFFOLDING parent : POLE, 2 -1
+SCANTLING parent : SCAFFOLDING, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SCAFFOLDING, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting SHAFT, 11d3790 ... 
+inserting SILL, 11d37e0 ... 
+ -------------------------------- imbalance found, -2 at POLE!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SCAFFOLDING, 3 -2
+SHAFT parent : POLE, 2 -1
+SILL parent : SHAFT, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : PILE, 3 0
+SQUAD parent : SOLDIERY, 2 -1
+TROOPS parent : SQUAD, 1 0
+inserting SPAR, 11d3830 ... 
+inserting STANCHION, 11d3880 ... 
+ -------------------------------- imbalance found, -2 at SOLDIERY!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 6 -2
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 5 -1
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : PILE, 4 -2
+SPAR parent : SQUAD, 1 0
+SQUAD parent : SOLDIERY, 3 -1
+STANCHION parent : TROOPS, 1 0
+TROOPS parent : SQUAD, 2 1
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 2 0
+BALK parent : BAIL, 1 0
+BRACE parent : CROSSPIECE, 3 0
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 3 0
+STANCHION parent : TROOPS, 1 0
+TROOPS parent : SQUAD, 2 1
+inserting BAR, 11d38d0 ... 
+inserting BEACON, 11d3920 ... 
+ -------------------------------- imbalance found, -2 at BALK!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 4 -2
+BALK parent : BAIL, 3 -2
+BAR parent : BALK, 2 -1
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 5 2
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 6 1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 3 0
+STANCHION parent : TROOPS, 1 0
+TROOPS parent : SQUAD, 2 1
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 1
+CANTILEVER parent : COLUMN, 1 0
+COLUMN parent : BRACE, 2 0
+CROSSBAR parent : COLUMN, 1 0
+CROSSPIECE parent : null, 5 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 3 0
+STANCHION parent : TROOPS, 1 0
+TROOPS parent : SQUAD, 2 1
+inserting CHINK, 11d3970 ... 
+inserting COLUMN, 11d39c0 ... 
+inserting STRUT, 11d3a10 ... 
+ -------------------------------- imbalance found, 2 at TROOPS!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 0
+CANTILEVER parent : COLUMN, 2 -1
+CHINK parent : CANTILEVER, 1 0
+COLUMN parent : BRACE, 3 0
+COLUMN parent : CROSSBAR, 1 0
+CROSSBAR parent : COLUMN, 2 1
+CROSSPIECE parent : null, 6 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 5 -1
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 4 -1
+STANCHION parent : TROOPS, 2 -1
+STRUT parent : STANCHION, 1 0
+TROOPS parent : SQUAD, 3 2
+rotate LR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 0
+CANTILEVER parent : COLUMN, 2 -1
+CHINK parent : CANTILEVER, 1 0
+COLUMN parent : BRACE, 3 0
+COLUMN parent : CROSSBAR, 1 0
+CROSSBAR parent : COLUMN, 2 1
+CROSSPIECE parent : null, 5 0
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 4 0
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 3 0
+STANCHION parent : STRUT, 1 0
+STRUT parent : SQUAD, 2 0
+TROOPS parent : STRUT, 1 0
+inserting STUD, 11d3a60 ... 
+inserting TIMBER, 11d3ab0 ... 
+ -------------------------------- imbalance found, 2 at TROOPS!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 0
+CANTILEVER parent : COLUMN, 2 -1
+CHINK parent : CANTILEVER, 1 0
+COLUMN parent : BRACE, 3 0
+COLUMN parent : CROSSBAR, 1 0
+CROSSBAR parent : COLUMN, 2 1
+CROSSPIECE parent : null, 7 -2
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 6 -2
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 5 -2
+STANCHION parent : STRUT, 1 0
+STRUT parent : SQUAD, 4 -2
+STUD parent : TROOPS, 2 -1
+TIMBER parent : STUD, 1 0
+TROOPS parent : STRUT, 3 2
+rotate LR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 0
+CANTILEVER parent : COLUMN, 2 -1
+CHINK parent : CANTILEVER, 1 0
+COLUMN parent : BRACE, 3 0
+COLUMN parent : CROSSBAR, 1 0
+CROSSBAR parent : COLUMN, 2 1
+CROSSPIECE parent : null, 6 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 5 -1
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 4 -1
+STANCHION parent : STRUT, 1 0
+STRUT parent : SQUAD, 3 -1
+STUD parent : TIMBER, 1 0
+TIMBER parent : STRUT, 2 0
+TROOPS parent : TIMBER, 1 0
+inserting TRANSVERSE, 11d3b00 ... 
+ -------------------------------- imbalance found, -2 at STRUT!
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 0
+CANTILEVER parent : COLUMN, 2 -1
+CHINK parent : CANTILEVER, 1 0
+COLUMN parent : BRACE, 3 0
+COLUMN parent : CROSSBAR, 1 0
+CROSSBAR parent : COLUMN, 2 1
+CROSSPIECE parent : null, 7 -2
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 6 -2
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 5 -2
+STANCHION parent : STRUT, 1 0
+STRUT parent : SQUAD, 4 -2
+STUD parent : TIMBER, 1 0
+TIMBER parent : STRUT, 3 -1
+TRANSVERSE parent : TROOPS, 1 0
+TROOPS parent : TIMBER, 2 1
+rotate RR 
+AXLE parent : BAIL, 1 0
+BAIL parent : BRACE, 3 -1
+BALK parent : BAR, 1 0
+BAR parent : BAIL, 2 0
+BEACON parent : BAR, 1 0
+BRACE parent : CROSSPIECE, 4 0
+CANTILEVER parent : COLUMN, 2 -1
+CHINK parent : CANTILEVER, 1 0
+COLUMN parent : BRACE, 3 0
+COLUMN parent : CROSSBAR, 1 0
+CROSSBAR parent : COLUMN, 2 1
+CROSSPIECE parent : null, 6 -1
+GIRDER parent : JAMB, 1 0
+JAMB parent : LATH, 2 0
+JOIST parent : JAMB, 1 0
+LATH parent : PILE, 3 1
+LINTEL parent : LATH, 1 0
+PILE parent : CROSSPIECE, 5 -1
+POLE parent : SHAFT, 1 0
+SOLDIERY parent : SQUAD, 2 0
+SPAR parent : SOLDIERY, 1 0
+SQUAD parent : PILE, 4 -1
+STANCHION parent : STRUT, 1 0
+STRUT parent : TIMBER, 2 0
+STUD parent : STRUT, 1 0
+TIMBER parent : SQUAD, 3 0
+TRANSVERSE parent : TROOPS, 1 0
+TROOPS parent : TIMBER, 2 1
