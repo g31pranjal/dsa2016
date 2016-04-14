@@ -1,6 +1,3 @@
-// dfs : customized for undirected
-
-
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -111,7 +108,7 @@ stack * initStack(int max) {
 
 void push(stack *s, int n) {
 	if(s->c < s->max - 1) {
-		s->c = n;
+		s->arr[s->c] = n;
 		s->c = s->c + 1;
 	}
 }
@@ -119,16 +116,15 @@ void push(stack *s, int n) {
 int pop(stack * s) {
 	int t;
 	if(s->c != 0) {
-		t = s->arr[s->c];
+		t = s->arr[s->c-1];
 		s->c = s->c - 1;
 	}
 	return t;
-
 }
 
 
 int topoSort(graph * g) {
-	int ver = g->v, i, u, v;
+	int ver = g->v, i, u, v, label=1;
 	int dgin[ver];
 	int dgout[ver];
 	int incounter[ver];
@@ -158,22 +154,12 @@ int topoSort(graph * g) {
 		}
 	}
 
-	for(i=0;i<ver;i++) 
-		printf("%d\t", incounter[i]);
-
-	printf("\n");
-
-	/*for(i=0;i<ver;i++) 
-		printf("%d\t", dgout[i]);
-*/
 	while(s->c != 0) {
-		//printf(" sc :: %d\n", s->c);
 		u = pop(s);
-		//printf("%d adj : ", u);
+		printf("%d\t%d", u+1, label++);
 		ele = g->adj[u];
 		while(ele != NULL) {
 			v = ele->v;
-			printf("%d, ", v);
 			if(incounter[v] > 0) {
 				incounter[v]--;
 				if(incounter[v] == 0)
@@ -186,8 +172,6 @@ int topoSort(graph * g) {
 
 
 
-
-	
 }
 
 
