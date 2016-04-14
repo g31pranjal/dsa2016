@@ -128,14 +128,18 @@ int pop(stack * s) {
 
 
 int topoSort(graph * g) {
-	int ver = g->v, i;
+	int ver = g->v, i, u, v;
 	int dgin[ver];
 	int dgout[ver];
+	int incounter[ver];
 	node * ele;
+
+	stack * s = initStack(100);
 
 	for(i=0;i<ver;i++) {
 		dgin[i] = 0;
 		dgout[i] = 0;
+		incounter[i] = 0;
 	}
 
 	for(i=0;i<ver;i++) {
@@ -143,42 +147,69 @@ int topoSort(graph * g) {
 		while(ele != NULL) {
 			dgout[i]++;
 			dgin[ele->v]++;
+			incounter[ele->v]++;
 			ele = ele->next;
 		}
 	}
 
+	for(i=0;i<ver;i++) {
+		if(incounter[i] == 0) {
+			push(s, i);
+		}
+	}
 
 	for(i=0;i<ver;i++) 
-		printf("%d\t", dgin[i]);
+		printf("%d\t", incounter[i]);
 
 	printf("\n");
 
-	for(i=0;i<ver;i++) 
+	/*for(i=0;i<ver;i++) 
 		printf("%d\t", dgout[i]);
+*/
+	while(s->c != 0) {
+		//printf(" sc :: %d\n", s->c);
+		u = pop(s);
+		//printf("%d adj : ", u);
+		ele = g->adj[u];
+		while(ele != NULL) {
+			v = ele->v;
+			printf("%d, ", v);
+			if(incounter[v] > 0) {
+				incounter[v]--;
+				if(incounter[v] == 0)
+					push(s, v);
+			}
+			ele = ele->next;
+		}
+		printf("\n");
+	} 
+
+
+
+
+	
 }
 
 
 
 int main() {
-	int ver = 8;
+	int ver = 9;
 	graph *g;
 	g = initGraph(ver);
 
 
-	addEdge(g, 0, 7);
-	addEdge(g, 0, 4);
+	addEdge(g, 0, 2);
+	addEdge(g, 0, 3);
 	addEdge(g, 1, 3);
-	addEdge(g, 1, 2);
-	addEdge(g, 2, 1);
+	addEdge(g, 1, 4);
 	addEdge(g, 2, 3);
-	addEdge(g, 3, 0);
+	addEdge(g, 2, 5);
+	addEdge(g, 2, 7);
 	addEdge(g, 3, 4);
-	addEdge(g, 4, 5);
-	addEdge(g, 5, 7);
-	addEdge(g, 6, 5);
-	addEdge(g, 7, 6);
-	addEdge(g, 7, 4);
-
+	addEdge(g, 4, 6);
+	addEdge(g, 4, 8);
+	addEdge(g, 5, 6);
+	addEdge(g, 7, 8);
 
 	printGraph(g);
 
