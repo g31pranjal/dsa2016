@@ -116,6 +116,18 @@ void printGraph(graph * g) {
 	}
 }
 
+
+typedef struct Edge edge;
+
+struct Edge {
+	int u;
+	int v;
+};
+
+edge e[50];
+int edgeC;
+
+
 void dfs(graph  *g, int s, stack *st){
 	tm++;
 	g->b[s] = tm;
@@ -127,6 +139,11 @@ void dfs(graph  *g, int s, stack *st){
 	while(current !=  NULL){
 		if(g->s[current->v] == 0){
 			g->p[current->v] = s;
+			
+			e[edgeC].u = s;
+			e[edgeC].v = current->v;
+			edgeC++;
+			
 			dfs(g, current->v, st);
 		}
 		current = current->next;
@@ -139,22 +156,40 @@ void dfs(graph  *g, int s, stack *st){
 }
 
 
+
 void scc(graph *g, graph *gt){
 	tm = 0;
 	int ver = g->v, i;
 	stack *st1= initStack(100);
 	stack *st2= initStack(100);
 
+	for(i=0;i<50;i++) {
+		e[i].u = -1;
+		e[i].v = -1;
+	}
+
+	edgeC = 0;
 
 	for(i=0;i<ver;i++){
 		if(g->s[i] == 0){
 			dfs(g, i, st1);
+			for(edgeC = edgeC - 1;edgeC>=0;edgeC--){
+				printf("(%d,%d)\t", e[edgeC].u , e[edgeC].v);
+			}
+			edgeC = 0;
+			printf("\n");
 		}
 	}
 
 	for(i=0;i<ver;i++) {
 		printf("%d :: %d\t%d\t%d\t%d\n", i, g->p[i], g->b[i], g->f[i], g->s[i] );
 	}
+
+	
+
+
+	edgeC = 0;
+	tm = 0;
 	
 	int vert;	
 
@@ -162,8 +197,12 @@ void scc(graph *g, graph *gt){
 		vert= pop(st1);
 		if(gt->s[vert] == 0){
 			dfs(gt, vert, st2);
+			for(edgeC = edgeC - 1;edgeC>=0;edgeC--) {
+				printf("(%d,%d)\t", e[edgeC].u , e[edgeC].v);
+			}
+			edgeC = 0;
+			printf("\n");
 		}
-		printf("\n");
 	}
 
 	for(i=0;i<ver;i++) {
