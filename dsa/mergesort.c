@@ -22,6 +22,14 @@ void merge(int arr[], int p, int q, int ri) {
 
 	int l[np], r[nq], i, m, n;
 
+	for(i=0;i<np;i++) {
+		l[i] = arr[p+i];
+	}
+
+	for(i=0;i<nq;i++) {
+		r[i] = arr[q+1+i];
+	}
+
 	m=0;
 	n=0;
 	for(i=p;i<=ri;i++) {
