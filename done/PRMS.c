@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
+
 typedef struct Node node;
 
 struct Node {
@@ -18,6 +19,7 @@ struct Graph {
 	node ** adj;
 	int start;
 };
+
 
 graph * initGraph(int num) {
 	graph * g = (graph *)malloc(sizeof(graph));
@@ -47,8 +49,26 @@ void addEdge(graph * g, int u, int v, int wt) {
 	n1->next = g->adj[v];
 	g->adj[v] = n1;
 
+
 	g->e = g->e + 1;
+	
 }	
+
+void printGraph(graph * g) {
+	int ver = g->v;
+	int i;
+	node * ele;
+	for(i=0;i<ver;i++) {
+		printf("%d :: ", i);	
+		ele = g->adj[i];
+		while(ele !=NULL) {
+			printf("%d,%d --> ", ele->v, ele->wt);
+			ele = ele->next;
+		}
+		printf("\n");
+	}
+}
+
 
 int startDJK(graph *g) {
 	int str = g->start;
@@ -71,23 +91,42 @@ int startDJK(graph *g) {
 	min = 0;
 	mini = str;
 
+	int minWt = 0;
+
 	while(func != 0) {
+		//printf("min : %d, mini : %d \n", min, mini);
+		
 		for(j=mini+1;j<ver;j++) {
 			if(cloud[j] == -1 && dist[j] >= 0 && min >= dist[j]) {
 				min = dist[j];
 				mini = j;
 			}
 		}
+		// we get the minimum from the array at this point !
+
 		cloud[mini] = 0;
+		// into the cloud !
+
+		minWt += dist[mini];
+
 		ele = g->adj[mini];	
+		//adjacency list of min index !
+
+
 		while(ele != NULL) {
 			if(cloud[ele->v] == -1) {
-				if(dist[ele->v] == -1 || dist[ele->v] > min + ele->wt) {
-					dist[ele->v] = min + ele->wt;
+				
+				if(dist[ele->v] == -1 || dist[ele->v] > ele->wt) {
+					dist[ele->v] = ele->wt;
 				}
 			}
 			ele = ele->next;
 		}
+
+		// for(i=0;i<ver;i++) {
+		// 	printf("%d, %d\t", cloud[i], dist[i]);
+		// }
+		// printf("\n");
 
 		func = 0;
 		min = mini = -1;
@@ -99,41 +138,50 @@ int startDJK(graph *g) {
 				break;
 			}
 		}
+
+		//printf("min : %d, mini : %d \n", min, mini);
+
+
 	}
+
+	// for(i=0;i<ver;i++) {
+	// 	if(dist[i] != 0)
+	// 		printf("%d ", dist[i]);
+	// }
+	// printf("\n");
+
+	printf("%d\n", minWt);
+
 
 	return 0;
 }
 
 
 int main() {
-	int tc;
-	scanf("%d", &tc);
-
-	graph **g = (graph **)malloc(tc*sizeof(graph *));
-	graph *ng; 
+	
+	graph *g; 
 
 	int i, v, e, m, n, w, s, j;
 
-	for(i=0;i<tc;i++) {
-		scanf("%d %d", &v, &e);
-		ng = initGraph(v);
+	scanf("%d %d", &v, &e);
+	g = initGraph(v);
 
-		for(j=0;j<e;j++) {
-			scanf("%d %d %d", &m, &n, &w);
-			addEdge(ng, m-1, n-1, w);
-
-		}
-
-		scanf("%d", &s);
-		ng->start = s-1;
-		g[i] = ng;
+	for(j=0;j<e;j++) {
+		scanf("%d %d %d", &m, &n, &w);
+		addEdge(g, m-1, n-1, w);
 
 	}
 
-	for(i=0;i<tc;i++) {
-		startDJK(g[i]);
-	}
+	scanf("%d", &s);
+	g->start = s-1;
 
+	
+	//printGraph(g[i]);
+
+	startDJK(g);
+	
 	return 0;
+
+	
 
 }
